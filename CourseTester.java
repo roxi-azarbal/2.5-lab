@@ -7,14 +7,19 @@
  *  ==>
  *    Answer: The two parameter constructor's body finishes first. 
  *              Only the two-parameter constructor needs to set name 
- *              and scores because the one parameter constructor just runs the two-parameter constructor.
+ *              and scores because the one parameter constructor just 
+ *              runs the two-parameter constructor.
  *
  * 2. StudentRecord will have both getAverage() and
  *    getAverage(int first, int last). Why does Java allow two methods
  *    with the same name? Why would it reject a third method,
  *    public int getAverage()?
  * ==>
- *    Answer: Java allows two methods with the same name because it distinguishes overloaded methods by the number, types, and order of their parameters, rather than their return types. Java would reject public int getAverage() because it has the same name and parameter list as getAverage(). having different return types alone isn't enough to distinguish two overloaded methods.
+ *    Answer: Java allows two methods with the same name because it distinguishes 
+ *      overloaded methods by the number, types, and order of their parameters, 
+ *       rather than their return types. Java would reject public int getAverage() 
+ *       because it has the same name and parameter list as getAverage(). 
+ *       having different return types alone isn't enough to distinguish two overloaded methods.
  */
 public class CourseTester {
     public static void main(String[] args) {
@@ -33,7 +38,8 @@ public class CourseTester {
         // TEST 05
 
         StudentRecord mia = new StudentRecord("Mia Ross", new int[] { 70, 80, 90, 100 });
-        System.out.println("mia.toString() (expect \"Mia Ross's scores: [70, 80, 90, 100]\"): " + mia.toString());
+        System.out.println("mia.toString() (expect \"Mia Ross's scores: [70, 80, 90, 100]\"): " +
+                mia.toString());
 
         // TEST 06
 
@@ -42,16 +48,19 @@ public class CourseTester {
 
         // TEST 07
 
-        System.out.println("bob.getAverage() (expect 82.5): " + bob.getAverage());
+        System.out.println("bob.getAverage() (expect 82.5): "
+                + bob.getAverage());
 
         // TEST 08
 
         StudentRecord kai = new StudentRecord("Kai Moss", new int[] { 70, 75, 80, 85 });
-        System.out.println("kai.hasImproved() (expect true): " + kai.hasImproved());
+        System.out.println("kai.hasImproved() (expect true): "
+                + kai.hasImproved());
 
         // TEST 09
 
-        System.out.println("bob.getFinalAverage() (expect 82.5): " + bob.getFinalAverage());
+        System.out.println("bob.getFinalAverage() (expect 82.5): "
+                + bob.getFinalAverage());
 
         // TEST 10
 
@@ -62,22 +71,31 @@ public class CourseTester {
         Course math = new Course("Mathematics", roster);
         Course biology = new Course("Biology");
 
-        System.out.println("math.getCourseName() (expect \"Mathematics\"): " + math.getCourseName());
-        System.out.println("math.getEnrolledStudents() (expect \"roster\"): " + math.getEnrolledStudents());
-        System.out.println("biology.getCourseName() (expect \"Biology\"): " + biology.getCourseName());
-        System.out.println("biology.getEnrolledStudents() (expect \"0\"): " + biology.getEnrolledStudents());
+        System.out.println("math.getCourseName() (expect \"Mathematics\"): "
+                + math.getCourseName());
+        System.out.println("math.getEnrolledStudents() (expect \"roster\"): "
+                + math.getEnrolledStudents());
+        System.out.println("biology.getCourseName() (expect \"Biology\"): "
+                + biology.getCourseName());
+        System.out.println("biology.getEnrolledStudents() (expect \"0\"): "
+                + biology.getEnrolledStudents());
 
         // TEST 11
         System.out.println(
-                "math.toString() (expect \"== Mathematics ==\\n1.) Charlie Brown's scores: [93, 95, 97]\\n2.) Eva White's scores: [92, 94, 91]\\n3.) Frank Black's scores: [75, 80, 85]\\n\"): "
+                "math.toString() (expect \"== Mathematics ==\\n"
+                        + "1.) Charlie Brown's scores: [93, 95, 97]\\n"
+                        + "2.) Eva White's scores: [92, 94, 91]\\n"
+                        + "3.) Frank Black's scores: [75, 80, 85]\\n\"): "
                         + math.toString());
 
         // TEST 12
-        System.out.println("math.findBestStudent() (expect \"Charlie Brown\"): " + math.findBestStudent());
+        System.out.println("math.findBestStudent() (expect \"Charlie Brown\"): "
+                + math.findBestStudent());
 
         // TEST 13
         System.out.println(
-                "math.calculateTestAverage(0) (expect \"86.66666666666667\"): " + math.calculateTestAverage(0));
+                "math.calculateTestAverage(0) (expect \"86.66666666666667\"): "
+                        + math.calculateTestAverage(0));
 
         // STRETCH
 
