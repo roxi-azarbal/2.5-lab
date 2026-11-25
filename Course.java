@@ -22,7 +22,7 @@ public class Course {
     public String toString() {
         String result = "== " + courseName + " ==\n";
         for (int i = 0; i < enrolledStudents.length; i++) {
-            result += (i + 1) + ".) " + enrolledStudents[i].toString() + "\n"; // need diff format here?
+            result += (i + 1) + ".) " + enrolledStudents[i].toString() + "\n";
         }
         return result;
     }
